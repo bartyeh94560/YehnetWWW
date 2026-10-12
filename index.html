@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeh Network and Consulting | Strategic & Outsourced IT Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        },
+                        techNavy: {
+                            800: '#1e293b',
+                            850: '#172338',
+                            900: '#0f172a',
+                            950: '#0a0f1d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .circuit-bg {
+            background-color: #0a0f1d;
+            background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px),
+                              radial-gradient(rgba(5, 150, 105, 0.08) 1px, #0a0f1d 1px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+        .glow-emerald {
+            box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-techNavy-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header bg-techNavy-950/85 border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3.5 group">
+                <div class="relative w-12 h-12 rounded-xl bg-white/5 border border-emerald-500/20 p-1 flex items-center justify-center overflow-hidden shadow-lg shadow-emerald-500/10 group-hover:border-brand-400 transition-colors">
+                    <img src="Yehnet Logo 2026 small.jpg" 
+                         alt="Yeh Network and Consulting Logo" 
+                         class="w-full h-full object-contain"
+                         onerror="this.style.display='none'; document.getElementById('fallbackLogoHeader').classList.remove('hidden');" />
+                    <div id="fallbackLogoHeader" class="hidden w-full h-full flex items-center justify-center">
+                        <svg viewBox="0 0 100 115" class="w-full h-full drop-shadow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="leafGradHdr" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#047857"/>
+                                    <stop offset="50%" stop-color="#10b981"/>
+                                    <stop offset="100%" stop-color="#84cc16"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M50 110 C 45 95, 12 75, 10 38 C 10 12, 38 4, 50 2 C 62 4, 90 12, 90 38 C 88 75, 55 95, 50 110 Z" fill="url(#leafGradHdr)"/>
+                            <path d="M50 8 V 95 M 50 40 L 32 28 M 50 55 L 68 43 M 50 70 L 34 60 M 50 82 L 66 74" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+                            <circle cx="32" cy="28" r="3" fill="#ffffff"/>
+                            <circle cx="68" cy="43" r="3" fill="#ffffff"/>
+                            <circle cx="34" cy="60" r="3" fill="#ffffff"/>
+                            <circle cx="66" cy="74" r="3" fill="#ffffff"/>
+                            <text x="50" y="52" fill="#ffffff" font-size="6.5" font-family="monospace" font-weight="bold" text-anchor="middle" opacity="0.95">0111011011</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-1">
+                        Yeh <span class="text-brand-400">Network</span>
+                    </span>
+                    <span class="text-[10px] tracking-widest uppercase text-slate-400 font-semibold">&amp; Consulting</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-brand-400 transition-colors">About &amp; Leadership</a>
+                <a href="#services" class="hover:text-brand-400 transition-colors">Services</a>
+                <a href="#sectors" class="hover:text-brand-400 transition-colors">Sectors</a>
+                <a href="#experience" class="hover:text-brand-400 transition-colors">Case Studies</a>
+                <a href="#process" class="hover:text-brand-400 transition-colors">Methodology</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-emerald-600 hover:from-brand-500 hover:to-emerald-500 active:scale-95 transition-all shadow-md shadow-brand-600/25">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Consultation</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+                <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-techNavy-900 border-b border-slate-800 px-6 py-5 space-y-4 shadow-2xl">
+            <a href="#about" class="mobile-link block text-base font-medium text-slate-200 hover:text-brand-400">About &amp; Leadership</a>
+            <a href="#services" class="mobile-link block text-base font-medium text-slate-200 hover:text-brand-400">Services</a>
+            <a href="#sectors" class="mobile-link block text-base font-medium text-slate-200 hover:text-brand-400">Industry Sectors</a>
+            <a href="#experience" class="mobile-link block text-base font-medium text-slate-200 hover:text-brand-400">Track Record</a>
+            <a href="#process" class="mobile-link block text-base font-medium text-slate-200 hover:text-brand-400">Methodology</a>
+            <div class="pt-2">
+                <a href="#contact" class="mobile-link w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 circuit-bg overflow-hidden border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-950/90 border border-brand-500/30 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-6">
+                            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                            Fractional CIO &amp; IT Engineering for SMBs
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.15]">
+                            Resilient Networks. <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-emerald-300 to-teal-200">
+                                Uncompromising Security.
+                            </span>
+                        </h1>
+                        <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            <strong>Yeh Network and Consulting</strong> transforms fragile tech setups into secure, standardized, high-performance engines. We act as your outsourced IT department—handling network overhauls, daily troubleshooting, and stringent compliance frameworks.
+                        </p>
+                        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-brand-600 hover:bg-brand-500 shadow-lg shadow-brand-600/30 transition-all text-base">
+                                <span>Get an IT Assessment</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                            <a href="#experience" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-medium text-slate-300 bg-techNavy-800/90 hover:bg-techNavy-800 hover:text-white border border-slate-700 transition-all text-base">
+                                <i data-lucide="file-check-2" class="w-4 h-4 text-brand-400"></i>
+                                <span>Explore Track Record</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Trust Badges -->
+                        <div class="mt-10 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-brand-400"></i>
+                                <span>Zero-Downtime Migration</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="layers" class="w-4 h-4 text-brand-400"></i>
+                                <span>Standard Operating Procedures (SOPs)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="lock" class="w-4 h-4 text-brand-400"></i>
+                                <span>Regulatory & PCI-DSS Audit Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual / Brand Emblem -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md bg-gradient-to-b from-slate-800/60 to-slate-900/90 p-8 rounded-3xl border border-slate-700/60 shadow-2xl glow-emerald">
+                            <!-- Logo Brand Showcase -->
+                            <div class="flex flex-col items-center justify-center p-6 bg-slate-950/60 rounded-2xl border border-slate-800/80 mb-6 group">
+                                <div class="w-36 h-36 relative flex items-center justify-center mb-3">
+                                    <img src="Yehnet Logo 2026 small.jpg" 
+                                         alt="Yeh Network and Consulting Emblem" 
+                                         class="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+                                         onerror="this.style.display='none'; document.getElementById('heroLogoSvg').classList.remove('hidden');" />
+                                    <div id="heroLogoSvg" class="hidden w-full h-full flex flex-col items-center justify-center">
+                                        <svg viewBox="0 0 100 115" class="w-28 h-28 drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <defs>
+                                                <linearGradient id="leafGradHero" x1="0%" y1="100%" x2="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="#047857"/>
+                                                    <stop offset="50%" stop-color="#10b981"/>
+                                                    <stop offset="100%" stop-color="#84cc16"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <!-- Leaf Contour -->
+                                            <path d="M50 110 C 45 95, 12 75, 10 38 C 10 12, 38 4, 50 2 C 62 4, 90 12, 90 38 C 88 75, 55 95, 50 110 Z" fill="url(#leafGradHero)"/>
+                                            <!-- Circuit Traces -->
+                                            <path d="M50 8 V 95 M 50 40 L 32 28 M 50 55 L 68 43 M 50 70 L 34 60 M 50 82 L 66 74" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+                                            <circle cx="32" cy="28" r="3.2" fill="#ffffff"/>
+                                            <circle cx="68" cy="43" r="3.2" fill="#ffffff"/>
+                                            <circle cx="34" cy="60" r="3.2" fill="#ffffff"/>
+                                            <circle cx="66" cy="74" r="3.2" fill="#ffffff"/>
+                                            <!-- Binary Code Stream -->
+                                            <text x="50" y="52" fill="#ffffff" font-size="7" font-family="monospace" font-weight="bold" text-anchor="middle" opacity="0.95">0111011011</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold font-display tracking-tight text-white">Yeh Network</div>
+                                    <div class="text-xs uppercase tracking-widest text-slate-400 font-medium">and Consulting</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                                <div>
+                                    <div class="text-xs uppercase font-semibold text-brand-400 tracking-wider">Infrastructure Status</div>
+                                    <div class="text-base font-bold text-white mt-0.5">Active Systems Operations</div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live Monitored
+                                </span>
+                            </div>
+
+                            <div class="space-y-4 py-6">
+                                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between text-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="p-2 rounded-lg bg-brand-500/10 text-brand-400"><i data-lucide="wifi" class="w-4 h-4"></i></div>
+                                        <div>
+                                            <div class="font-semibold text-white">Network Fabric &amp; VLANs</div>
+                                            <div class="text-xs text-slate-400">Staff, Guest &amp; POS Segmented</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400">Optimal</span>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between text-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400"><i data-lucide="hard-drive-download" class="w-4 h-4"></i></div>
+                                        <div>
+                                            <div class="font-semibold text-white">Disaster Recovery Backups</div>
+                                            <div class="text-xs text-slate-400">Immutable 3-2-1 Cloud Copy</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400">Protected</span>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between text-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400"><i data-lucide="file-check" class="w-4 h-4"></i></div>
+                                        <div>
+                                            <div class="font-semibold text-white">Compliance &amp; SOP Audit</div>
+                                            <div class="text-xs text-slate-400">Security Standard Enforced</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400">100% Pass</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+                                <span>Fractional SLA Target</span>
+                                <span class="font-mono text-white font-bold">&lt; 15 min Critical Response</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder & Leadership Section -->
+        <section id="about" class="py-24 bg-techNavy-900 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-sm lg:max-w-none">
+                            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-600 to-teal-600 opacity-20 blur-xl"></div>
+                            <div class="relative bg-techNavy-800 border border-slate-700/80 rounded-3xl p-8 overflow-hidden">
+                                <div class="flex items-center space-x-4 mb-6">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-teal-500 flex items-center justify-center font-display font-extrabold text-2xl text-white shadow-lg">
+                                        BY
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white font-display">Bart Yeh</h3>
+                                        <p class="text-brand-400 text-sm font-medium">Principal IT Consultant &amp; Founder</p>
+                                    </div>
+                                </div>
+
+                                <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                                    Seasoned infrastructure specialist focused on bridging the technical gap for growing businesses. Bart designs and governs end-to-end network reorganizations, compliance policies, and managed IT services across mission-critical retail, hospitality, finance, and online commerce environments.
+                                </p>
+
+                                <div class="space-y-3 border-t border-slate-700/80 pt-6 text-xs text-slate-300">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-slate-400">Core Specialty:</span>
+                                        <span class="font-medium text-white">Network Modernization &amp; Security</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-slate-400">Role Capability:</span>
+                                        <span class="font-medium text-white">Fractional CIO &amp; Outsourced IT Lead</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-slate-400">Direct Contact:</span>
+                                        <a href="mailto:byeh@yehnet.com" class="font-mono text-brand-400 hover:underline">byeh@yehnet.com</a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-slate-400">Location Focus:</span>
+                                        <span class="font-medium text-white">SMBs Nationwide (Remote &amp; On-Site)</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center justify-between flex-wrap gap-3">
+                                    <a href="https://www.linkedin.com/in/bart-yeh-8bb35/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="inline-flex items-center gap-2 text-xs font-semibold text-brand-300 hover:text-white bg-slate-900/80 px-4 py-2 rounded-lg border border-slate-700 hover:border-brand-500 transition-colors">
+                                        <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+                                        <span>View LinkedIn Profile</span>
+                                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                                    </a>
+                                    <a href="mailto:byeh@yehnet.com" 
+                                       class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 px-3.5 py-2 rounded-lg border border-slate-700 transition-colors">
+                                        <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+                                        <span>Email Bart</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-950/80 border border-brand-500/30 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                            Strategic IT Leadership
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+                            Bringing Enterprise Rigor to the SMB Ecosystem
+                        </h2>
+                        <p class="mt-4 text-slate-300 text-base leading-relaxed">
+                            Most small and mid-sized enterprises struggle with a patchwork of improvised cables, consumer-grade routers, unmanaged switches, and unwritten procedures. When outages or compliance audits hit, operations stall.
+                        </p>
+                        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                            Under Bart Yeh's guidance, <strong>Yeh Network and Consulting</strong> transforms these vulnerabilities into standardized, auditable IT environments. We don't just "fix laptops"—we author formal standard operating procedures (SOPs), isolate high-risk systems, and establish immutable backups that protect executive liability and business continuity.
+                        </p>
+
+                        <!-- Highlights Row -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+                            <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                                <div class="text-2xl font-bold text-brand-400">100%</div>
+                                <div class="text-xs text-slate-300 mt-1 font-medium">Documented Infrastructure</div>
+                                <p class="text-[11px] text-slate-400 mt-1">Full network topography maps, port labeling &amp; credential vaulting.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                                <div class="text-2xl font-bold text-white">Turnkey</div>
+                                <div class="text-xs text-slate-300 mt-1 font-medium">Outsourced Department</div>
+                                <p class="text-[11px] text-slate-400 mt-1">Complete Tier 1 to Tier 3 engineering without payroll bloat.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                                <div class="text-2xl font-bold text-teal-400">Auditable</div>
+                                <div class="text-xs text-slate-300 mt-1 font-medium">Compliance Policies</div>
+                                <p class="text-[11px] text-slate-400 mt-1">Custom-crafted protocols for PCI-DSS, SOC 2, and data safety.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="py-24 bg-techNavy-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase font-bold text-brand-400 tracking-wider">What We Provide</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-white">Full-Spectrum IT Consulting Services</p>
+                    <p class="mt-4 text-slate-400 text-sm sm:text-base">Targeted execution tailored to your business model, whether replacing internal friction or building your digital foundation from scratch.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Service 1 -->
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="headset" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">Outsourced IT Department</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                Acting as your turnkey internal IT wing for day-to-day operations, ticketing, hardware provisioning, and tech leadership.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                                    <span>24/7 endpoint monitoring &amp; remote helpdesk support</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                                    <span>Hardware setup, workstation onboarding &amp; offboarding</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                                    <span>Vendor management (ISPs, phone systems, SaaS licensing)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800">
+                            <a href="#contact" class="text-xs font-semibold text-brand-400 hover:text-white flex items-center gap-1">Inquire Managed IT &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="git-branch" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">Network Reorganization</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                Re-architecting tangled network cabling, obsolete switches, unmanaged Wi-Fi access points, and insecure subnet routing.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                    <span>Structured cabling rack cleanup &amp; port tagging</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                    <span>VLAN isolation (Staff vs. POS vs. Guest Wi-Fi)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                    <span>Enterprise firewall configuration &amp; SD-WAN failover</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800">
+                            <a href="#contact" class="text-xs font-semibold text-emerald-400 hover:text-white flex items-center gap-1">Redesign Network &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">SOPs &amp; Compliance</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                Establishing standardized operating procedures and security guardrails to safeguard operations and satisfy audits.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                                    <span>Authoring bespoke Network Operational Procedures</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                                    <span>PCI-DSS, NIST and sector compliance alignment</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                                    <span>Employee cyber hygiene protocols &amp; MFA enforcement</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800">
+                            <a href="#contact" class="text-xs font-semibold text-teal-400 hover:text-white flex items-center gap-1">Strengthen Governance &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="cloud-cog" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">Security &amp; Disaster Recovery</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                Guaranteeing operational survival against ransomware, hardware failures, power interruptions, and accidental data loss.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                                    <span>Automated, immutable 3-2-1 hybrid cloud backup systems</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                                    <span>Rapid recovery point (RPO) and recovery time (RTO) plans</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                                    <span>Next-generation Endpoint Detection &amp; Response (EDR)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800">
+                            <a href="#contact" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1">Secure Infrastructure &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Sectors Section -->
+        <section id="sectors" class="py-24 bg-techNavy-900 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase font-bold text-brand-400 tracking-wider">Vertical Specialization</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-white">Engineered for Your Industry's Pressures</p>
+                    <p class="mt-4 text-slate-400 text-sm">We recognize that a retail storefront and a wealth management firm face completely different IT risks.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Hospitality -->
+                    <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center mb-4">
+                            <i data-lucide="hotel" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 font-display">Hospitality</h3>
+                        <p class="text-xs text-slate-400 mb-4">Hotels, Resorts &amp; Fine Dining</p>
+                        <div class="space-y-2.5 text-xs text-slate-300">
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">POS Isolation:</strong>
+                                Uninterrupted credit card transactions isolated from guest bandwidth drains.
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">PMS Redundancy:</strong>
+                                High-availability check-in/check-out server failovers preventing front-desk delays.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce -->
+                    <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center mb-4">
+                            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 font-display">E-Commerce</h3>
+                        <p class="text-xs text-slate-400 mb-4">Digital Brands &amp; Fulfillment Centers</p>
+                        <div class="space-y-2.5 text-xs text-slate-300">
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">Warehouse Connectivity:</strong>
+                                Zero-dead-zone mesh Wi-Fi for handheld inventory barcode scanners.
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">API &amp; Gateway Hardening:</strong>
+                                Protecting order processing conduits and customer checkout data.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finance -->
+                    <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                            <i data-lucide="landmark" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 font-display">Finance</h3>
+                        <p class="text-xs text-slate-400 mb-4">Accounting, Wealth &amp; Advisory</p>
+                        <div class="space-y-2.5 text-xs text-slate-300">
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">Zero-Trust Architecture:</strong>
+                                Strict role-based permissions preventing unauthorized ledger access.
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">Regulatory Audit Logs:</strong>
+                                Tamper-proof logging for compliance with state and federal oversight.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retail -->
+                    <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center mb-4">
+                            <i data-lucide="store" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 font-display">Retail</h3>
+                        <p class="text-xs text-slate-400 mb-4">Multi-Branch Stores &amp; Boutiques</p>
+                        <div class="space-y-2.5 text-xs text-slate-300">
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">Multi-Site SD-WAN:</strong>
+                                Seamless connectivity uniting multiple store branches to central HQ servers.
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800">
+                                <strong class="text-white block mb-0.5">IoT &amp; Camera Separation:</strong>
+                                Isolating IP surveillance security cameras to prevent network congestion.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Track Record Section -->
+        <section id="experience" class="py-24 bg-techNavy-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase font-bold text-brand-400 tracking-wider">Demonstrated Execution</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-white">Project Domain Experience &amp; Impact</p>
+                    <p class="mt-4 text-slate-400 text-sm">A summary of the challenges solved and systems delivered by Bart Yeh across SMB client portfolios.</p>
+                </div>
+
+                <!-- Experience Table -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm text-slate-300">
+                            <thead class="bg-slate-950/80 text-xs uppercase text-slate-400 font-semibold border-b border-slate-800">
+                                <tr>
+                                    <th scope="col" class="py-4 px-6">Domain / Sector</th>
+                                    <th scope="col" class="py-4 px-6">Identified Technical Problem</th>
+                                    <th scope="col" class="py-4 px-6">Initiative Delivered</th>
+                                    <th scope="col" class="py-4 px-6">Business Result &amp; Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/60 text-xs sm:text-sm">
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="py-4 px-6 font-semibold text-white whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                                            <span>Hospitality Resort Group</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-400">
+                                        Guest streaming choked credit card processing; sporadic POS drops during peak dinner service.
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-300">
+                                        Full VLAN segmentation, QoS traffic throttling, dual-ISP automatic failover, and rack cleanup.
+                                    </td>
+                                    <td class="py-4 px-6 text-emerald-400 font-medium">
+                                        0 POS transaction drops during peak hours; 100% guest Wi-Fi isolation achieved.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="py-4 px-6 font-semibold text-white whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+                                            <span>E-Commerce Logistics Hub</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-400">
+                                        Dead spots in 45,000 sq ft warehouse caused order picker desyncs and shipping delays.
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-300">
+                                        High-density wireless access point deployment, active roaming tuning, and UPS battery backup arrays.
+                                    </td>
+                                    <td class="py-4 px-6 text-emerald-400 font-medium">
+                                        Reduced picking latency to under 2ms; completely eliminated scanner disconnects.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="py-4 px-6 font-semibold text-white whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                                            <span>Boutique Accounting Firm</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-400">
+                                        No documented standard operating procedures (SOPs); critical tax data stored on unencrypted local drives.
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-300">
+                                        Engineered full network operational SOPs, implemented immutable cloud backups &amp; strict MFA.
+                                    </td>
+                                    <td class="py-4 px-6 text-emerald-400 font-medium">
+                                        Passed external security audit with zero deficiencies; complete disaster recovery ready.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="py-4 px-6 font-semibold text-white whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+                                            <span>Multi-Location Specialty Retail</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-400">
+                                        5 disconnected store locations unable to share live inventory or communicate securely.
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-300">
+                                        Designed centralized SD-WAN mesh VPN, unified identity management, and standardized hardware fleet.
+                                    </td>
+                                    <td class="py-4 px-6 text-emerald-400 font-medium">
+                                        Cut branch management overhead by 45%; real-time cross-store inventory syncing.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Quotation Banner -->
+                <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-brand-950/60 to-slate-900 border border-brand-500/30 flex flex-col sm:flex-row items-center gap-6">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0">
+                        <i data-lucide="quote" class="w-7 h-7"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <p class="text-white font-medium text-sm sm:text-base leading-relaxed italic">
+                            "A business shouldn't have to hire a $180k/year full-time Network Engineer just to keep its Wi-Fi stable and POS secure. We bring high-level architectural discipline directly to small and mid-sized teams at fractional scale."
+                        </p>
+                        <div class="text-xs text-brand-400 font-bold mt-2 uppercase tracking-wider">&mdash; Bart Yeh, Principal Consultant</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="process" class="py-24 bg-techNavy-900 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase font-bold text-brand-400 tracking-wider">Systematic Approach</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-white">How We Transform Your Technology</p>
+                    <p class="mt-4 text-slate-400 text-sm">We take your IT from reactive, unpredictable stress to an orderly, documented utility.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+                        <div>
+                            <span class="text-4xl font-extrabold text-slate-800 mb-2 block font-display">01</span>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">Physical &amp; Digital Audit</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Detailed on-site or remote inventory of all access points, switches, firewalls, ISP contracts, and server bottlenecks.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-mono text-brand-400">
+                            Deliverable: Vulnerability Matrix
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+                        <div>
+                            <span class="text-4xl font-extrabold text-slate-800 mb-2 block font-display">02</span>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">Roadmap &amp; Reorganization</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Re-cabling, clean rack reorganization, managed switch installation, and segmenting sensitive subnets.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-mono text-brand-400">
+                            Deliverable: Clean Physical Stack
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+                        <div>
+                            <span class="text-4xl font-extrabold text-slate-800 mb-2 block font-display">03</span>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">SOP &amp; Policy Creation</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Writing clear Standard Operating Procedures so your team has concrete rules for passwords, new hires, and security.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-mono text-brand-400">
+                            Deliverable: Runbooks &amp; Policies
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+                        <div>
+                            <span class="text-4xl font-extrabold text-slate-800 mb-2 block font-display">04</span>
+                            <h3 class="text-lg font-bold text-white mb-2 font-display">Ongoing Stewardship</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Functioning as your outsourced IT wing: continuous 24/7 monitoring, scheduled firmware patches, and rapid user support.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] font-mono text-brand-400">
+                            Deliverable: Fractional SLA &amp; Support
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Consultation Form Section -->
+        <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white">Schedule an IT Consultation</h2>
+      <p class="mt-3 text-slate-400">Reach out directly to Bart Yeh to discuss network optimization, security audits, or outsourced IT department needs.</p>
+    </div>
+
+    <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 shadow-2xl">
+      <!-- Web3Forms Form -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+        <!-- Paste your access key here -->
+        <input type="hidden" name="access_key" value="dddfa52d-add5-4209-9fd9-47241ba87b41" />
+        <input type="hidden" name="subject" value="New IT Consultation Request - Yeh Network" />
+        <input type="hidden" name="from_name" value="Yeh Network Website" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name *</label>
+            <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500" placeholder="Jane Doe" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Work Email *</label>
+            <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500" placeholder="jane@company.com" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Company / Organization</label>
+            <input type="text" name="company" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500" placeholder="Acme Logistics Inc." />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Industry Sector *</label>
+            <select name="sector" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
+              <option value="Hospitality">Hospitality & Resorts</option>
+              <option value="E-Commerce">E-Commerce & Logistics</option>
+              <option value="Finance">Finance & Professional Services</option>
+              <option value="Retail">Retail & Point-of-Sale</option>
+              <option value="Other">Other SMB Infrastructure</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Scope or Current Challenges *</label>
+          <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500" placeholder="Describe network layout, security concerns, or upcoming overhaul requirements..."></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3.5 px-6 rounded-lg transition-all flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 cursor-pointer text-sm">
+          <span>Submit Consultation Request</span>
+        </button>
+
+        <!-- Status Message Banner -->
+        <div id="formResult" class="hidden text-center text-sm font-medium py-3 px-4 rounded-lg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg bg-white/5 border border-emerald-500/20 p-0.5 flex items-center justify-center overflow-hidden">
+                            <img src="Yehnet Logo 2026 small.jpg" 
+                                 alt="Yeh Network and Consulting Logo" 
+                                 class="w-full h-full object-contain"
+                                 onerror="this.style.display='none'; document.getElementById('footerFallbackLogo').classList.remove('hidden');" />
+                            <div id="footerFallbackLogo" class="hidden w-full h-full flex items-center justify-center">
+                                <svg viewBox="0 0 100 115" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M50 110 C 45 95, 12 75, 10 38 C 10 12, 38 4, 50 2 C 62 4, 90 12, 90 38 C 88 75, 55 95, 50 110 Z" fill="#10b981"/>
+                                    <path d="M50 8 V 95 M 50 40 L 32 28 M 50 55 L 68 43" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="text-white font-bold font-display text-lg">Yeh Network</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Precision network architecture, fractional IT management, and compliance governance for growing small and mid-sized enterprises.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://www.linkedin.com/in/bart-yeh-8bb35/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-brand-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider font-display">Specialized Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-white transition-colors">Outsourced IT Department</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Network Reorganization &amp; Rack Cleanup</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Operational SOPs &amp; Compliance</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Disaster Recovery &amp; Backup Planning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider font-display">Sectors Served</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#sectors" class="hover:text-white transition-colors">Hospitality &amp; Food Service</a></li>
+                        <li><a href="#sectors" class="hover:text-white transition-colors">E-Commerce &amp; Logistics Hubs</a></li>
+                        <li><a href="#sectors" class="hover:text-white transition-colors">Finance &amp; Wealth Accounting</a></li>
+                        <li><a href="#sectors" class="hover:text-white transition-colors">Multi-Location Retail</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider font-display">Consulting Office</h4>
+                    <p class="text-xs text-slate-400">Principal: Bart Yeh</p>
+                    <p class="text-xs text-slate-400 mt-1">Available Mon - Fri: 8:00 AM – 6:00 PM</p>
+                    <div class="mt-3 space-y-1">
+                        <a href="mailto:byeh@yehnet.com" class="text-xs text-brand-400 font-mono hover:underline block">byeh@yehnet.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Yeh Network and Consulting. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-400 transition-colors">Confidentiality Policy</a>
+                    <a href="#" class="hover:text-slate-400 transition-colors">Service Level Agreement</a>
+                    <a href="#" class="hover:text-slate-400 transition-colors">Compliance Guarantee</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Interactive Handling & Direct Mailto Dispatch
+        const consultForm = document.getElementById('consultForm');
+        const formSuccess = document.getElementById('formSuccess');
+        const submitBtn = document.getElementById('submitBtn');
+
+        consultForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('workEmail').value;
+            const company = document.getElementById('companyName').value;
+            const sector = document.getElementById('sectorSelect').value;
+            const need = document.getElementById('primaryNeed').value;
+            const details = document.getElementById('projectDetails').value;
+
+            // Visual loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Submitting Request...
+            `;
+
+            // Prepare pre-formatted mailto link to byeh@yehnet.com
+            const subject = encodeURIComponent(`IT Consultation Request: ${company} (${name})`);
+            const body = encodeURIComponent(
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Company: ${company}\n` +
+                `Sector: ${sector}\n` +
+                `Consultation Need: ${need}\n\n` +
+                `Infrastructure Notes:\n${details}`
+            );
+
+            setTimeout(() => {
+                submitBtn.classList.add('hidden');
+                formSuccess.classList.remove('hidden');
+                lucide.createIcons();
+                
+                // Open user's default email client addressed to byeh@yehnet.com
+                window.location.href = `mailto:byeh@yehnet.com?subject=${subject}&body=${body}`;
+            }, 600);
+        });
+    </script>
+</body>
+</html>
